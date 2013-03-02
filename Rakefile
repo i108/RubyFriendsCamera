@@ -14,6 +14,7 @@ Motion::Project::App.setup do |app|
   app.deployment_target = '5.1'
   app.interface_orientations = [:portrait]
   app.prerendered_icon = true
+  app.libs << '-fobjc-arc'
   app.frameworks += [
     'Social',
     'Accelerate',
