@@ -16,7 +16,6 @@ Motion::Project::App.setup do |app|
   app.prerendered_icon = true
   app.libs << '-fobjc-arc'
   app.frameworks += [
-    'Social',
     'Accelerate',
     'AssetsLibrary',
     'ImageIO',
@@ -24,6 +23,7 @@ Motion::Project::App.setup do |app|
     'QuartzCore',
     'CoreImage'
   ]
+  app.weak_frameworks += ['Twitter', 'Social']
   
   conf_file = './config.yml'
   if File.exists?(conf_file)
